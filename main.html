@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Game</title>
+</head>
+
+<body class="bg-gray-900 text-white">
+  <div class="container mx-auto p-4">
+    <script src="main.js" async></script>
+    
+    <!-- Level Bar -->
+    <div class="mb-4">
+      <div id="level" class="inline-block p-2 text-xl mb-2 bg-gray-800 text-white text-center rounded-lg">Level: 1</div>
+      <div class="relative pt-1">
+        <div class="flex mb-2">
+          <div class="w-full">
+            <div class="relative">
+              <div class="overflow-hidden h-2 text-xs flex rounded-lg bg-indigo-200">
+                <div id="exp-bar" class="shadow-none flex flex-col whitespace-nowrap text-white bg-green-300"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs flex mb-10">
+      <div id="home-tab" class="tab-item flex-1 text-center py-2 px-4 cursor-pointer bg-blue-500 text-white transform scale-105 rounded-lg">
+        <i class="fa fa-home"></i> Home
+      </div>
+      <div id="upgrades-tab" class="tab-item flex-1 text-center py-2 px-4 cursor-pointer rounded-lg">
+        <i class="fa fa-arrow-up"></i> Upgrades
+      </div>
+      <div id="inventory-tab" class="tab-item flex-1 text-center py-2 px-4 cursor-pointer rounded-lg">
+        <i class="fa fa-box"></i> Inventory
+      </div>
+      <div class="tab-item flex-1 text-center py-2 px-4 cursor-pointer rounded-lg" id="character-tab">
+      <i class="fa fa-check"></i> Character
+      </div>
+    </div>
+
+    <!-- Inventory Tab Content -->
+    <div id="inventory" class="tab-content" style="display: none;">
+      <button id="sell-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2 mb-4">
+        Sell Items
+      </button>
+      <div id="inventory-grid" class="inventory-content p-5 bg-gray-800 border-none rounded-lg align-center"></div> <!-- New div for grid -->
+    </div>
+
+    <!-- Home Tab Content -->
+    <div id="home" class="tab-content">
+      <button id="loot-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Loot
+      </button>
+    </div>
+
+     <!-- Character Tab Content -->
+     <div id="character" class="tab-content">
+        <!-- Monster Section -->
+<div id="monster-section" class="bg-gray-800 rounded-sm grid grid-cols-3 gap-4">
+    <div id="monster-name" class="text-xl">Monster Name</div>
+    <div id="monster-health" class="text-lg mb-10">Health: 100</div>
+    <button id="attack-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+      Attack
+  </div>  
+      </div>
+
+    <!-- Upgrades Tab Content -->
+    <div id="upgrades" class="tab-content" style="display: none;">
+      <button id="upgrade-button" class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2">
+        Buy Upgrade (50 Essence)
+      </button>
+      <button id="autoclicker-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Buy Auto Clicker (100 Essence)
+      </button>
+    </div>
+
+    <!-- Currency -->
+    <div id="currency" class="mt-4 text-xl">
+      Essence: 0
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip absolute top-0 right-0 bg-red-500 text-white p-2 rounded shadow-lg" style="display: none;">
+      Not enough essence!
+    </div>
+  </div>
+  </body>

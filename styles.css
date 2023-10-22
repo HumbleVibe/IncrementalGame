@@ -1,0 +1,88 @@
+#inventory {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+  }
+.inventory-item {
+    width: 30px;
+    height: 30px;
+    margin-bottom:20px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+  }
+
+.inventory-content {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.inventory-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#exp-bar {
+  box-sizing: border-box; /* Add this line */
+  transition: width 0.5s ease-in-out;
+}
+
+#inventory-grid {
+display: grid;
+grid-template-columns: repeat(11, 1fr);
+gap: 8px;
+}
+
+.tab-content {
+    display:none;
+}
+
+/* ... existing styles ... */
+
+#monster-section {
+    border: 0px solid rgb(255, 0, 0);
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    background-color: #101b2a;
+  }
+  
+#attack-button {
+    margin-top: 10px;
+  }
+  
+  .monster {
+    text-align: center;
+    border: 1px solid rgb(255, 0, 0);
+    padding: 10px;
+    flex-grow: 1;
+    width: 100px; /* Adjust as necessary */
+    height: 150px; /* Adjust as necessary */
+    background-image: url("https://riku-assets.com/generations/fae87ecc-c21b-46e1-9277-dd0f350ec458.png"); /* Replace with the path to your image */
+    background-size: cover; /* Cover the entire area of the box */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    position:relative/* Set position to relative */
+  }
+  
+  .monster-health {
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    position: absolute; /* Absolute position the health text */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Ensure it is centered */
+    background-color: black;
+  }
+  
+  #mini-inventory {
+    text-align:center;
+  }
+
+  #player-info {
+    text-align:center;
+  }
